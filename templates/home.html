@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+  {% if user.is_authenticated %}
+    <h1 class="display-4">Bienvenido, {{ user.username }}!</h1>
+  {% else %}
+    <h1 class="display-4">Bienvenido a Mi Proyecto!</h1>
+  {% endif %}
+  <p class="lead">Este es un componente simple de jumbotron, un componente de estilo jumbotron simple para llamar la atención adicional al contenido o información destacados.</p>
+  <hr class="my-4">
+  <p>Utiliza clases de utilidad para la tipografía y el espaciado para distribuir el contenido dentro del contenedor más grande.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Aprende más</a>
+  <br>
+  <br>
+  <a class="btn btn-primary btn-lg" href="#" role="button">App test quizz</a>
+</div>
+{% endblock %}
